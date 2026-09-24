@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 const NAV = [
   { to: "/", key: "map" as const },
+  { to: "/nextmove", key: "nextmove" as const },
   { to: "/improv", key: "improv" as const },
   { to: "/rankings", key: "ranks" as const },
   { to: "/compare", key: "compare" as const },
@@ -37,7 +38,7 @@ export function Chrome({ children }: { children: React.ReactNode }) {
                 "rounded-sm px-2 py-2 text-sm md:px-3 md:text-sm",
                 pathname === n.to
                   ? "bg-paper/10 text-paper"
-                  : n.key === "improv" ? "text-accent hover:bg-paper/10" : "text-muted hover:text-paper",
+                  : (n.key === "improv" || n.key === "nextmove") ? "text-accent hover:bg-paper/10" : "text-muted hover:text-paper",
               )}
             >
               {t[n.key]}
@@ -54,7 +55,7 @@ export function Chrome({ children }: { children: React.ReactNode }) {
           </Button>
         </nav>
       </header>
-      <div className="shrink-0 border-b border-line px-3 py-2 text-sm text-muted md:px-5">{pathname.includes("/improv") ? (lang === "zh" ? "今日即兴 · 缺席不扣分，人生已经有考勤了。" : "Daily improv · No streaks. Life already has attendance sheets.") : t.modeled}</div>
+      <div className="shrink-0 border-b border-line px-3 py-2 text-sm text-muted md:px-5">{pathname.includes("/nextmove") ? (lang === "zh" ? "下一手 · 猜的是选择，不定义你是谁。" : "Next Move · A guess about a choice, not a label for you.") : pathname.includes("/improv") ? (lang === "zh" ? "今日即兴 · 缺席不扣分，人生已经有考勤了。" : "Daily improv · No streaks. Life already has attendance sheets.") : t.modeled}</div>
       <div className="min-h-0 flex-1">{children}</div>
     </div>
   );

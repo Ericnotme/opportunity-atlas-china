@@ -30,6 +30,8 @@ jobs:
           ATLAS_BASE: /opportunity-atlas-china/plain/
       - run: npx tsc --noEmit
         working-directory: plain
+      - run: npm test
+        working-directory: plain
       - run: mkdir -p dist/plain && cp -R plain/dist/. dist/plain/
       - uses: actions/upload-pages-artifact@v3
         with:

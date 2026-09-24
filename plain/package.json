@@ -6,6 +6,7 @@
   "homepage": "https://ericnotme.github.io/opportunity-atlas-china/plain/",
   "scripts": {
     "dev": "vite",
+    "test": "node scripts/test-nextmove.mjs && node scripts/test-improv.mjs",
     "build": "vite build && node scripts/finalize.mjs",
     "preview": "vite preview"
   },
