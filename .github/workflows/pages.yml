@@ -19,8 +19,20 @@ jobs:
         with:
           node-version: "22"
           cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            plain/package-lock.json
       - run: npm ci
       - run: npm run build
+      - run: npm ci
+        working-directory: plain
+      - run: npm run build
+        working-directory: plain
+        env:
+          ATLAS_BASE: /opportunity-atlas-china/plain/
+      - run: npx tsc --noEmit
+        working-directory: plain
+      - run: mkdir -p dist/plain && cp -R plain/dist/. dist/plain/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

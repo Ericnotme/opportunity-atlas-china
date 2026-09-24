@@ -1,5 +1,7 @@
 # China Opportunity Atlas · 中国机会地图
 
+**新版 · 人话版：** https://ericnotme.github.io/opportunity-atlas-china/plain/ · [新版代码与说明](plain/README.md)
+
 **Live site:** https://ericnotme.github.io/opportunity-atlas-china/
 
 District-level interactive atlas of how childhood neighborhoods in **Shanghai, Beijing, Shenzhen, Guangzhou, Chengdu and Hong Kong** shape modeled household income at age 35.
