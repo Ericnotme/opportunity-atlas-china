@@ -12,6 +12,27 @@
 - 模型说明：[METHODOLOGY.md](METHODOLOGY.md)
 - X 宣传素材：[MARKETING.md](MARKETING.md)
 
+## 新功能：人生即兴局
+
+[打开即兴局](https://ericnotme.github.io/opportunity-atlas-china/plain/improv/)
+
+每天选一种状态和 1 / 3 / 10 分钟，领取一张有实际小行动的「今日签」。
+32 个核心任务，每个有三档大小；同一方向在八天内不重复核心任务。四个爵士键跟随合成伴奏的和弦，可以用 A S D F 或触屏演奏。
+
+- 签文是创意游戏，不声称预测命运；不接收出生日期或其他敏感信息。
+- 每天按设备本地日期换签；同日刷新保留已选任务。
+- 可以记录「我试了」「再小一点」「今天先算了」，没有连续打卡奖励或惩罚。
+- 最近两次都选缩小或跳过时，下一次默认建议一分钟。
+- 记录仅存在当前浏览器，最多 90 份；两个部署域名不共享记录。
+- 音乐在用户点击后才启动，提供音量控制，离开页面停止；没有外部音频素材或付费模型依赖。
+
+验证：`node scripts/test-improv.mjs` 检查每日日期、任务轮换、输入损坏恢复、历史上限、任务缩小，以及音频调度和退出清理。构建与 TypeScript 检查另行通过。
+浏览器自动化受当前环境的安全检查故障限制，手机实际排版、真实扬声器听感和 WebMCP 浏览器验证仍未实测。
+
+产品假设：用户会为了「一点被理解的感觉 + 一个做得完的下一步 + 亲手演奏的即时反馈」回来。留存与快乐程度尚未做用户研究验证。
+
+技术参考：[Web Audio 实践](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices)、[浏览器本地存储](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)。
+
 ## 本地运行
 
 ```sh

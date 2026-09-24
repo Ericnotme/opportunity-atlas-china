@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 const NAV = [
   { to: "/", key: "map" as const },
+  { to: "/improv", key: "improv" as const },
   { to: "/rankings", key: "ranks" as const },
   { to: "/compare", key: "compare" as const },
   { to: "/methodology", key: "about" as const },
@@ -27,7 +28,7 @@ export function Chrome({ children }: { children: React.ReactNode }) {
             {t.appEn}
           </div>
         </Link>
-        <nav className="ml-auto flex items-center gap-0.5 md:gap-1">
+        <nav className="ml-auto flex max-w-full flex-wrap items-center gap-0.5 md:gap-1">
           {NAV.map((n) => (
             <Link
               key={n.to}
@@ -36,7 +37,7 @@ export function Chrome({ children }: { children: React.ReactNode }) {
                 "rounded-sm px-2 py-2 text-sm md:px-3 md:text-sm",
                 pathname === n.to
                   ? "bg-paper/10 text-paper"
-                  : "text-muted hover:text-paper",
+                  : n.key === "improv" ? "text-accent hover:bg-paper/10" : "text-muted hover:text-paper",
               )}
             >
               {t[n.key]}
@@ -53,7 +54,7 @@ export function Chrome({ children }: { children: React.ReactNode }) {
           </Button>
         </nav>
       </header>
-      <div className="shrink-0 border-b border-line px-3 py-2 text-sm text-muted md:px-5">{t.modeled}</div>
+      <div className="shrink-0 border-b border-line px-3 py-2 text-sm text-muted md:px-5">{pathname.includes("/improv") ? (lang === "zh" ? "今日即兴 · 缺席不扣分，人生已经有考勤了。" : "Daily improv · No streaks. Life already has attendance sheets.") : t.modeled}</div>
       <div className="min-h-0 flex-1">{children}</div>
     </div>
   );
