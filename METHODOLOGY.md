@@ -42,8 +42,9 @@ Following Chetty & Hendren’s movers design, the share of a place gap captured 
 
 | Layer | Source |
 | --- | --- |
-| Boundaries | Official PRC / Hong Kong district GeoJSON |
-| Mainland income | 2023 disposable income: yearbooks, statistical bulletins, published district rankings |
+| Boundaries | Official PRC / Hong Kong district GeoJSON. Nanshan streets: OSM admin_level 8 clipped into the existing 440305 polygon (not a civil-affairs original). |
+| Mainland income | 2023 disposable income: yearbooks, statistical bulletins, published district rankings. Nanshan streets have no published income; the district figure is pop-weighted and shifted only by documented public functions (Science Park, University Town, Qianhai, OCT). |
+| Population | Nanshan streets: 2020 census (第七次全国人口普查公报第二号). |
 | Hong Kong income | 2021 Census monthly household median, 18 districts |
 | School / jobs / inclusion | 0–100 scores coded from public education reputation, industrial structure, hukou tightness |
 
