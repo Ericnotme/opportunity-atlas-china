@@ -32,7 +32,7 @@ export function DistrictDetail({ onClose }: { onClose?: () => void }) {
             {lang === "zh" ? city.nameZh : city.nameEn}
           </h2>
           <p className="text-xs text-muted">
-            {cityDs.length} {lang === "zh" ? "个区级单元" : "districts"}
+            {cityDs.length} {lang === "zh" ? "个空间单元" : "units"}
           </p>
         </div>
         {mid && best && worst && (

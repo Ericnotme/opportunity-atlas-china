@@ -2,7 +2,7 @@ import type { DataSource, OutcomeId } from "./types";
 export type Lang = "zh" | "en";
 export const COPY = {
   zh: {
-    app: "中国机会地图", appEn: "人话版 · 六城 90 区",
+    app: "中国机会地图", appEn: "人话版 · 六城，南山拆到街道",
     tagline: "努力很重要。出生地址也挺会抢戏。",
     modeled: "模型演示 · 所有结果均为模拟值",
     parent: "父母收入排在哪",
@@ -22,7 +22,7 @@ export const COPY = {
     ranksTitle: "模型怎么排", methodTitle: "先看懂，再当真",
   },
   en: {
-    app: "China Opportunity Map", appEn: "Plain edition · 6 cities · 90 districts",
+    app: "China Opportunity Map", appEn: "Plain edition · Nanshan split to streets",
     tagline: "Work hard. Your starting address has other plans.",
     modeled: "Model demo · All outcomes are simulated",
     parent: "Where parents stand",
