@@ -74,13 +74,13 @@ function Zh() {
       <section className="space-y-2">
         <h2 className="font-display text-xl text-paper">数据</h2>
         <ul className="list-disc space-y-1 pl-5">
-          <li>区界：国家行政区划 GeoJSON（区 / 县 / 香港区议会）。深圳南山区拆到 8 个街道：OSM admin_level=8 裁入既有区多边形，轮廓不是民政原件。</li>
-          <li>收入：2023 年人均可支配收入（统计公报、年鉴、公开排行）；香港为 2021 年人口普查住户月入中位数。南山各街道没有公开收入公报，只用区级数字做人口加权，并按可核对的功能分区（科技园、大学城、前海、华侨城等）平移。</li>
-          <li>人口：南山各街道用七人普 2020 年常住人口；区级人口仍用原表。</li>
+          <li>区界：国家行政区划 GeoJSON（区 / 县 / 香港区议会）。北京、上海、广州、深圳、成都、杭州拆到街道或镇：OSM admin_level=8 裁入既有区多边形，轮廓不是民政原件。成都青白江、大邑、彭州、邛崃、简阳在 OSM 里盖不住原区界，仍保持整区。</li>
+          <li>收入：2023 年人均可支配收入（统计公报、年鉴、公开排行）；杭州为市统计局 2023 年 1–12 月全体居民人均可支配收入。香港为 2021 年人口普查住户月入中位数。除南山 8 个街道外，街道收入直接沿用所在区，不是街道公报。南山仍是区级数字按可核对功能（科技园、大学城、前海、华侨城等）做的人口加权平移。</li>
+          <li>人口：南山各街道用七人普 2020 年常住人口。其余街道按所在区常住人口做面积分摊，不是街道普查公报。杭州分区人口用 2023 年末常住人口公报；西湖风景名胜区 2.4 万不在这套区界里。</li>
           <li>学校、岗位、包容等 0–100 分：根据公开教育口碑、产业构成与户籍松紧编码，方法页与 CSV 的 source 字段可核对。</li>
         </ul>
         <p>
-          被标记为 compiled 的单元格不是普查微观记录，而是由相邻公开序列外推。香港 18 区收入是普查值，约束力最强。南山街道收入尤其不是公报。
+          被标记为 compiled 的单元格不是普查微观记录。香港 18 区收入是普查值，约束力最强。街道收入不是公报：除南山外，同一区内颜色相同，因为用的是同一个区级数字。
         </p>
       </section>
 
@@ -88,10 +88,10 @@ function Zh() {
         <h2 className="font-display text-xl text-paper">局限（请写进申请材料）</h2>
         <ul className="list-disc space-y-1 pl-5">
           <li>没有搬迁者准实验，不能把颜色读成因果处理效应。</li>
-          <li>区是粗单元。浦东、朝阳、龙岗内部的方差可能大于区与区之间。南山拆到街道后，颜色差仍是功能平移，不是税务微数据。</li>
+          <li>区是粗单元，拆到街道也没有变出税务微数据。除南山已写明的功能平移外，街道颜色等于所在区。成都有五个单元盖不住，仍是整区。</li>
           <li>当前收入会同时捕获选择与因果：高房价区已经筛掉了许多低收入家庭。</li>
           <li>性别差距是校准项，不是区级微观估计。</li>
-          <li>货币：内地为人民币家庭收入，香港为港元；色标在六城之间按结果相对位置对齐，不按购买力平价对齐。</li>
+          <li>货币：内地为人民币家庭收入，香港为港元；色标在七城之间按结果相对位置对齐，不按购买力平价对齐。</li>
         </ul>
       </section>
 
@@ -117,7 +117,9 @@ function En() {
         <p>
           A mostly district-level Chinese counterpart to Chetty, Friedman, Hendren, Jones & Porter’s
           Opportunity Atlas — built as a public demonstration of data-driven modeling and
-          interactive cartography. Shenzhen’s Nanshan is split to eight streets.
+          interactive cartography. Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu and Hangzhou
+          are split to streets where OSM covers the district. Same-district streets share the
+          district income, except eight Nanshan streets with a documented function shift.
         </p>
       </header>
       <section className="space-y-2">
@@ -152,7 +154,7 @@ R = 50 + ρ_city (p − 50) + θ(p) (Q − 0.5)·100 + γ_g
         <h2 className="font-display text-xl text-paper">Limits to state in an application</h2>
         <ul className="list-disc space-y-1 pl-5">
           <li>No movers design — colours are not causal treatment effects.</li>
-          <li>Districts are coarse; Pudong or Longgang contain tract-sized gaps. Nanshan streets use OSM outlines clipped to the existing district polygon — not civil-affairs originals — and income is a documented-function shift of the district figure, not a street bulletin.</li>
+          <li>Districts are coarse. Street outlines are OSM admin_level 8 clipped into the existing district polygon, not civil-affairs originals. Except Nanshan, street income is the parent district figure, so streets inside one district share a color. Population elsewhere is an area share, not a street census. Five Chengdu units stayed whole because OSM did not cover them.</li>
           <li>Current income mixes selection and causation via housing prices.</li>
           <li>Mainland figures are CNY household income; Hong Kong is HKD.</li>
         </ul>

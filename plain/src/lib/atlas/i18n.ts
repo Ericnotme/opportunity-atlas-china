@@ -2,14 +2,14 @@ import type { DataSource, OutcomeId } from "./types";
 export type Lang = "zh" | "en";
 export const COPY = {
   zh: {
-    app: "中国机会地图", appEn: "人话版 · 六城，南山拆到街道",
+    app: "中国机会地图", appEn: "人话版 · 七城，街道沿用区级收入",
     tagline: "努力很重要。出生地址也挺会抢戏。",
     modeled: "模型演示 · 所有结果均为模拟值",
     parent: "父母收入排在哪",
     parentHint: "25 表示收入高于本市约 25% 的家庭。拖一拖，看看模型里的起点差距。现实暂不支持拖动。",
     outcome: "想看什么", gender: "孩子性别（模型假设）", genderAll: "不限", genderF: "女", genderM: "男",
     click: "点一个区，看看模拟结果", quality: "环境评分 / 100", rank: "模拟收入位置",
-    cityRank: "本市模拟排序", allRank: "六城模拟排序", covariates: "模型参考了什么", source: "输入来源标签",
+    cityRank: "本市模拟排序", allRank: "七城模拟排序", covariates: "模型参考了什么", source: "输入来源标签",
     nextmove: "下一手", improv: "即兴局", about: "怎么看", compare: "比一比", ranks: "看排序", map: "地图", download: "下载数据",
     low: "模拟值低", high: "模拟值高", exposure: "假设搬个家",
     exposureHint: "模型假设：18 岁前住得越久，越接近目的地的模拟收入。这里只演示算法，没有跟踪真实搬家家庭。",
@@ -22,7 +22,7 @@ export const COPY = {
     ranksTitle: "模型怎么排", methodTitle: "先看懂，再当真",
   },
   en: {
-    app: "China Opportunity Map", appEn: "Plain edition · Nanshan split to streets",
+    app: "China Opportunity Map", appEn: "Plain edition · streets use district income",
     tagline: "Work hard. Your starting address has other plans.",
     modeled: "Model demo · All outcomes are simulated",
     parent: "Where parents stand",

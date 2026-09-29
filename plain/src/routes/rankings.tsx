@@ -53,7 +53,7 @@ function RankingsPage() {
               {t.download}
             </a>
           </div>
-          <p className="mb-4 text-sm text-muted">{lang === "zh" ? "所有结果均为模拟值。六城一起看收入时，按模拟收入位置排序；人民币和港元不混着比金额。" : "All outcomes are simulated. Six-city income ranking uses model income position, not mixed CNY and HKD amounts."}</p>
+          <p className="mb-4 text-sm text-muted">{lang === "zh" ? "所有结果均为模拟值。七城一起看收入时，按模拟收入位置排序；人民币和港元不混着比金额。" : "All outcomes are simulated. Cross-city income ranking uses model income position, not mixed CNY and HKD amounts."}</p>
           <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <thead className="sticky top-0 bg-ink text-sm tracking-wide text-muted uppercase">
               <tr>

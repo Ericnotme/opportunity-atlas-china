@@ -62,6 +62,18 @@ export const CITIES: CityDef[] = [
     center: [104.07, 30.67],
   },
   {
+    id: "hangzhou",
+    nameZh: "杭州",
+    nameEn: "Hangzhou",
+    rho: 0.43,
+    mu35: 12.12,
+    sigma35: 0.47,
+    currency: "CNY",
+    femaleLogGap: -0.12,
+    geo: `${import.meta.env.BASE_URL}geo/hangzhou.json`,
+    center: [120.15, 30.25],
+  },
+  {
     id: "hongkong",
     nameZh: "香港",
     nameEn: "Hong Kong",

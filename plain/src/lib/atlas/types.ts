@@ -4,6 +4,7 @@ export type CityId =
   | "guangzhou"
   | "shenzhen"
   | "chengdu"
+  | "hangzhou"
   | "hongkong";
 
 export type Gender = "all" | "female" | "male";

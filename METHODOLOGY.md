@@ -42,9 +42,9 @@ Following Chetty & Hendren’s movers design, the share of a place gap captured 
 
 | Layer | Source |
 | --- | --- |
-| Boundaries | Official PRC / Hong Kong district GeoJSON. Nanshan streets: OSM admin_level 8 clipped into the existing 440305 polygon (not a civil-affairs original). |
-| Mainland income | 2023 disposable income: yearbooks, statistical bulletins, published district rankings. Nanshan streets have no published income; the district figure is pop-weighted and shifted only by documented public functions (Science Park, University Town, Qianhai, OCT). |
-| Population | Nanshan streets: 2020 census (第七次全国人口普查公报第二号). |
+| Boundaries | Official district GeoJSON, then OSM admin_level 8 clipped into the district polygon for Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu and Hangzhou. Not a civil-affairs original. Qingbaijiang, Dayi, Pengzhou, Qionglai and Jianyang stay whole. |
+| Mainland income | 2023 district disposable income. Streets inherit that figure, so they share a color inside the district. Nanshan’s eight streets are the exception: a documented-function shift, pop-weighted back to the district mean. Hangzhou: Hangzhou Bureau of Statistics, 2023 Jan–Dec all-residents disposable income. |
+| Population | Nanshan streets: 2020 census. Other streets: area share of the district population, not a street bulletin. Hangzhou districts: year-end 2023 bulletin. West Lake scenic area (24,000) is not a separate polygon. |
 | Hong Kong income | 2021 Census monthly household median, 18 districts |
 | School / jobs / inclusion | 0–100 scores coded from public education reputation, industrial structure, hukou tightness |
 

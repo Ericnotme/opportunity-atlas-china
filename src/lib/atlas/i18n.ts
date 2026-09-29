@@ -19,7 +19,7 @@ export const COPY = {
     quality: "邻里质量指数",
     rank: "估计成年收入分位",
     cityRank: "本市排序",
-    allRank: "六城排序",
+    allRank: "七城排序",
     covariates: "邻里特征",
     source: "数据来源",
     about: "方法",
@@ -59,7 +59,7 @@ export const COPY = {
     } as Record<DataSource, string>,
     compareTitle: "区与区",
     comparePick: "选择两个区，看童年地点造成的差距",
-    ranksTitle: "六城区级排行",
+    ranksTitle: "七城排行",
     methodTitle: "方法与局限",
   },
   en: {
